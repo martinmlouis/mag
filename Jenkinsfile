@@ -47,7 +47,7 @@ spec:
                 packer_version=\$(echo ${params.PACKER_VERSION} |cut -dv -f2)
                 echo "{\\"auths\\":{\\"https://index.docker.io/v1/\\":{\\"username\\":\\"${DOCKERHUB_USERNAME}\\",\\"password\\":\\"${DOCKERHUB_PASSWORD}\\"}}}" > /kaniko/.docker/config.json
                 cat /kaniko/.docker/config.json
-                /kaniko/executor -f `pwd`/Dockerfile -c `pwd` --insecure --skip-tls-verify --destination=martinlourduswamy/mag-tools:latest --build-arg=PACKER_VERSION=\$packer_version        
+                /kaniko/executor --force -f `pwd`/Dockerfile -c `pwd` --insecure --skip-tls-verify --destination=martinlourduswamy/mag-tools:latest --build-arg=PACKER_VERSION=\$packer_version        
               """
         }
       }
