@@ -21,7 +21,7 @@ spec:
   ##################################################################################################
   # Kubernetes service account provided by the support engineer (usually "jenkins-role")
   ##################################################################################################
-  serviceAccountName: jenkins-role
+  serviceAccountName: jenkins
   restartPolicy: Never
   containers:
   ###########################################################################################
