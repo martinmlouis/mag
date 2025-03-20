@@ -34,7 +34,7 @@ podTemplate(yaml: '''
 '''
   ) {
 
-  node(kaniko) {
+  node('kaniko') {
     stage('Build with Kaniko') {
       git 'https://github.com/martinmlouis/mag.git'
       container('kaniko') {
