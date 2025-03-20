@@ -45,6 +45,7 @@ podTemplate(yaml: '''
           cat /kaniko/.docker/config.json
           /kaniko/executor -f `pwd`/Dockerfile -c `pwd` --insecure --skip-tls-verify --destination=martinlourduswamy/mag-tools:latest --build-arg=PACKER_VERSION=\$packer_version        
         """
+        }
       }
     }
   }
