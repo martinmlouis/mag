@@ -36,7 +36,7 @@ podTemplate(yaml: '''
 
   node{
     stage('Build with Kaniko') {
-      git 'https://github.com/martinmlouis/mag.git'
+      //git 'https://github.com/martinmlouis/mag.git'
       container('kaniko') {
         withCredentials([usernamePassword(credentialsId: 'dockerhub-credentials', usernameVariable: 'DOCKERHUB_USERNAME', passwordVariable: 'DOCKERHUB_PASSWORD')]) {
         sh """
