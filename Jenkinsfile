@@ -18,11 +18,6 @@ metadata:
   labels:
     purpose: echimp-cd-helm-pipeline
 spec:
-  ##################################################################################################
-  # Kubernetes service account provided by the support engineer (usually "jenkins-role")
-  ##################################################################################################
-  serviceAccountName: jenkins
-  restartPolicy: Never
   containers:
   ###########################################################################################
   # For AWS CLI execution
